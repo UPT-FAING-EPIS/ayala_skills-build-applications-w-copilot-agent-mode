@@ -5,7 +5,8 @@ function Teams() {
     <ResourcePage
       componentName="teams"
       title="Teams"
-      description="Manage team records with a consistent Bootstrap table, card shell, search form, and modal." 
+      description="Manage team records with a consistent Bootstrap table, card shell, search form, and modal."
+      apiUrl="https://miniature-capybara-4jqr667jj75wcqxpq-8000.app.github.dev/api/teams/"
       columns={[
         { key: 'name', label: 'Team Name' },
         { key: 'members', label: 'Members' },

@@ -17,8 +17,8 @@ function formatValue(value) {
   return String(value);
 }
 
-function ResourcePage({ componentName, title, description, columns, titleField, emptyMessage }) {
-  const endpoint = getApiEndpoint(componentName);
+function ResourcePage({ componentName, title, description, apiUrl, columns, titleField, emptyMessage }) {
+  const endpoint = apiUrl || getApiEndpoint(componentName);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
