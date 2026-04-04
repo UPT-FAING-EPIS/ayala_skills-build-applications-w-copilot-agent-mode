@@ -6,7 +6,7 @@ function Activities() {
       componentName="activities"
       title="Activities"
       description="Track logged activities from the backend REST API with a consistent Bootstrap table layout."
-      apiUrl="https://miniature-capybara-4jqr667jj75wcqxpq-8000.app.github.dev/api/activities/"
+      apiUrl="https://miniature-capybara-4jqr667jj75wcqxpq-8000.app.github.dev/api/activities"
       columns={[
         { key: 'user', label: 'User' },
         { key: 'activity', label: 'Activity' },
