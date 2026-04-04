@@ -18,6 +18,7 @@ import os
 from django.contrib import admin
 from django.http import Http404, JsonResponse
 from django.urls import path
+from django.views.generic import RedirectView
 
 codespace_name = os.environ.get('CODESPACE_NAME')
 if codespace_name:
@@ -54,6 +55,7 @@ def api_component(request, component):
     })
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/api/', permanent=False), name='root-redirect'),
     path('admin/', admin.site.urls),
     path('api/', api_root, name='api-root'),
     path('api/<str:component>/', api_component, name='api-component'),
