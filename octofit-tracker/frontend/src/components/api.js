@@ -1,11 +1,5 @@
 export const getApiBaseUrl = () => {
-  const codespaceName = process.env.REACT_APP_CODESPACE_NAME;
-
-  if (codespaceName) {
-    return `https://miniature-capybara-4jqr667jj75wcqxpq-8000.app.github.dev`;
-  }
-
-  return 'http://localhost:8000';
+  return 'https://miniature-capybara-4jqr667jj75wcqxpq-8000.app.github.dev';
 };
 
 export const getApiEndpoint = (componentName) => `${getApiBaseUrl()}/api/${componentName}/`;
